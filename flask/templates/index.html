@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Pollen Classifier</title>
+</head>
+<body class="bg-gradient-to-br from-yellow-100 to-green-200 h-screen flex items-center justify-center">
+  <div class="bg-white shadow-lg rounded-lg p-10 text-center">
+    <h1 class="text-3xl font-bold mb-4 text-green-700">🌼 Pollen's Profiling</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" required class="block mb-4" />
+      <button class="bg-green-500 text-white px-6 py-2 rounded shadow hover:bg-green-600 transition">Classify</button>
+    </form>
+  </div>
+</body>
+</html>
