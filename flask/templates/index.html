@@ -4,14 +4,51 @@
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Pollen Classifier</title>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* Optional: Add a subtle overlay for readability */
+    .bg-overlay {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(2px);
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-br from-yellow-100 to-green-200 h-screen flex items-center justify-center">
-  <div class="bg-white shadow-lg rounded-lg p-10 text-center">
-    <h1 class="text-3xl font-bold mb-4 text-green-700">🌼 Pollen's Profiling</h1>
-    <form action="/predict" method="post" enctype="multipart/form-data">
-      <input type="file" name="file" required class="block mb-4" />
-      <button class="bg-green-500 text-white px-6 py-2 rounded shadow hover:bg-green-600 transition">Classify</button>
-    </form>
-  </div>
+<body class="h-screen flex flex-col">
+  <!-- Header Section -->
+  <header class="bg-white bg-opacity-80 shadow w-full">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-8">
+      <div class="text-2xl font-bold text-green-700">Pollen's Profiling</div>
+      <ul class="flex space-x-8 text-green-700 font-semibold">
+        <li><a href="./index.html" class="hover:text-green-900">Home</a></li>
+        <li><a href="#" class="hover:text-green-900">Services</a></li>
+        <li><a href="#" class="hover:text-green-900">Contact</a></li>
+        <li><a href="#" class="hover:text-green-900">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center">
+    <div class="bg-overlay shadow-lg rounded-lg p-10 text-center">
+      <h1 class="text-3xl font-bold mb-4 text-green-700">🌼 Pollen's Profiling</h1>
+      <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required class="block mb-4" />
+        <button class="bg-green-500 text-white px-6 py-2 rounded shadow hover:bg-green-600 transition">Classify</button>
+      </form>
+    </div>
+  </main>
+  <footer class="bg-white bg-opacity-80 w-full py-4 mt-8 shadow-inner">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-8 text-green-700 text-sm">
+      <span>&copy; 2025 HEMANTHKUMAR. All rights reserved.</span>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:text-green-900">Privacy Policy</a>
+        <a href="#" class="hover:text-green-900">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
